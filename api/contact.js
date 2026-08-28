@@ -18,7 +18,7 @@ module.exports = async (req, res) => {
       },
       body: JSON.stringify({
         from: 'Portfolio Contact <onboarding@resend.dev>',
-        to: 'nehanmohsin890@gmail.com',
+        to: 'mohsinnehan5@gmail.com',
         reply_to: email,
         subject: `New portfolio message from ${name}`,
         text: `From: ${name} (${email})\n\n${message}`,
