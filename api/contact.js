@@ -4,9 +4,21 @@ module.exports = async (req, res) => {
   }
 
   const { name, email, message } = req.body || {};
+  const cleanName = typeof name === 'string' ? name.trim() : '';
+  const cleanEmail = typeof email === 'string' ? email.trim() : '';
+  const cleanMessage = typeof message === 'string' ? message.trim() : '';
 
-  if (!name || !email || !message) {
-    return res.status(400).json({ error: 'Missing required fields' });
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (
+    cleanName.length < 2 ||
+    cleanName.length > 80 ||
+    !emailPattern.test(cleanEmail) ||
+    cleanEmail.length > 254 ||
+    cleanMessage.length < 10 ||
+    cleanMessage.length > 2000
+  ) {
+    return res.status(400).json({ error: 'Invalid form input' });
   }
 
   try {
@@ -19,9 +31,9 @@ module.exports = async (req, res) => {
       body: JSON.stringify({
         from: 'Portfolio Contact <onboarding@resend.dev>',
         to: 'mohsinnehan5@gmail.com',
-        reply_to: email,
-        subject: `New portfolio message from ${name}`,
-        text: `From: ${name} (${email})\n\n${message}`,
+        reply_to: cleanEmail,
+        subject: `New portfolio message from ${cleanName}`,
+        text: `From: ${cleanName} (${cleanEmail})\n\n${cleanMessage}`,
       }),
     });
 
