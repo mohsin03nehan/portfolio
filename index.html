@@ -4,6 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Muhammad Mohsin Nehan — Frontend AI Engineer</title>
+<meta name="description" content="Portfolio of Muhammad Mohsin Nehan — Frontend AI Engineer building AI-integrated, responsive web applications with React, JavaScript, and modern web technologies.">
+<meta name="author" content="Muhammad Mohsin Nehan">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://mohsinnehan.vercel.app/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Muhammad Mohsin Nehan — Frontend AI Engineer">
+<meta property="og:description" content="Frontend AI Engineer building AI-integrated, responsive web applications and real-world projects.">
+<meta property="og:url" content="https://mohsinnehan.vercel.app/">
+<meta property="og:image" content="https://mohsinnehan.vercel.app/images/profile.png">
+<meta property="og:image:alt" content="Muhammad Mohsin Nehan — Frontend AI Engineer">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Muhammad Mohsin Nehan — Frontend AI Engineer">
+<meta name="twitter:description" content="Frontend AI Engineer building AI-integrated, responsive web applications and real-world projects.">
+<meta name="twitter:image" content="https://mohsinnehan.vercel.app/images/profile.png">
 <link rel="icon" type="image/png" href="./images/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -58,7 +72,7 @@
     </div>
     <div class="hero-photo-wrap">
       <div class="hero-photo-glow"></div>
-      <img src="./images/profile.png" alt="Muhammad Mohsin Nehan">
+      <img src="./images/profile.webp" alt="Muhammad Mohsin Nehan">
     </div>
   </section>
 
@@ -122,7 +136,7 @@
     <div class="section-title">Featured Projects</div>
 
     <div class="project-card">
-      <img src="./images/laptop-resume-tailor.png" alt="Resume Tailor project screenshot">
+      <img src="./images/laptop-resume-tailor.webp" alt="Resume Tailor project screenshot">
       <div class="project-body">
         <h4>Resume Tailor — FlyRank AI Capstone</h4>
         <p>An AI tool that turns a job description and a candidate's background into a tailored cover letter and live skill-match analysis, streamed in real time. Diagnosed and fixed two real production bugs caused by AI-generated code trusting an outdated SDK API.</p>
@@ -135,7 +149,7 @@
     </div>
 
     <div class="project-card">
-      <img src="./images/laptop-techova.png" alt="Techova project screenshot">
+      <img src="./images/laptop-techova.webp" alt="Techova project screenshot">
       <div class="project-body">
         <h4>Techova — E-Commerce Platform</h4>
         <p>A multi-page e-commerce platform for tech accessories, built from an SRS through to deployment — users, products, orders, and an admin panel across 14–15 real products.</p>
@@ -148,7 +162,7 @@
     </div>
 
     <div class="project-card">
-      <img src="./images/laptop-zebaysh.png" alt="ZEBAYSH project screenshot">
+      <img src="./images/laptop-zebaysh.webp" alt="ZEBAYSH project screenshot">
       <div class="project-body">
         <h4>ZEBAYSH — Tailoring Brand Website</h4>
         <p>A responsive one-page website for a made-to-order tailoring business — custom image slider, Instagram-linked gallery, and multi-channel contact. Live client project; orders have increased since launch.</p>
@@ -249,9 +263,9 @@
         </div>
       </div>
       <form class="contact-form" id="contactForm">
-        <input type="text" id="name" placeholder="Your name" required>
-        <input type="email" id="email" placeholder="Your email" required>
-        <textarea id="message" placeholder="Your message" required></textarea>
+        <input type="text" id="name" placeholder="Your name" autocomplete="name" minlength="2" maxlength="80" required>
+        <input type="email" id="email" placeholder="Your email" autocomplete="email" maxlength="254" required>
+        <textarea id="message" placeholder="Your message" minlength="10" maxlength="2000" required></textarea>
         <button type="submit" id="submitBtn">Send Message</button>
         <div id="formStatus"></div>
       </form>
