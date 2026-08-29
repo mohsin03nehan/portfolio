@@ -56,39 +56,70 @@ document.querySelectorAll('.project-card').forEach((card) => {
 });
 
 // CONTACT FORM
-document.getElementById('contactForm').addEventListener('submit', async function (e) {
-  e.preventDefault();
-  const btn = document.getElementById('submitBtn');
-  const status = document.getElementById('formStatus');
-  btn.disabled = true;
-  status.textContent = 'Sending...';
-  status.className = '';
+const contactForm = document.getElementById('contactForm');
 
-  const payload = {
-    name: document.getElementById('name').value,
-    email: document.getElementById('email').value,
-    message: document.getElementById('message').value,
-  };
+if (contactForm) {
+  contactForm.addEventListener('submit', async function (e) {
+    e.preventDefault();
 
-  try {
-    const res = await fetch('/api/contact', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload),
-    });
-    const data = await res.json();
-    if (res.ok && data.success) {
-      status.textContent = 'Message sent — thank you!';
-      status.className = 'status-ok';
-      document.getElementById('contactForm').reset();
-    } else {
-      status.textContent = 'Something went wrong. Please try emailing directly.';
+    const btn = document.getElementById('submitBtn');
+    const status = document.getElementById('formStatus');
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    // Client-side edge-case validation
+    if (name.length < 2 || name.length > 80) {
+      status.textContent = 'Please enter a valid name.';
       status.className = 'status-err';
+      return;
     }
-  } catch (err) {
-    status.textContent = 'Network error. Please try emailing directly.';
-    status.className = 'status-err';
-  } finally {
-    btn.disabled = false;
-  }
-});
+
+    if (message.length < 10 || message.length > 2000) {
+      status.textContent = 'Message must be between 10 and 2000 characters.';
+      status.className = 'status-err';
+      return;
+    }
+
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      status.textContent = 'Please enter a valid email address.';
+      status.className = 'status-err';
+      return;
+    }
+
+    btn.disabled = true;
+    status.textContent = 'Sending...';
+    status.className = '';
+
+    const payload = { name, email, message };
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+
+      let data = {};
+      try {
+        data = await res.json();
+      } catch (_) {
+        data = {};
+      }
+
+      if (res.ok && data.success) {
+        status.textContent = 'Message sent — thank you!';
+        status.className = 'status-ok';
+        contactForm.reset();
+      } else {
+        status.textContent = 'Something went wrong. Please try emailing directly.';
+        status.className = 'status-err';
+      }
+    } catch (err) {
+      status.textContent = 'Network error. Please try emailing directly.';
+      status.className = 'status-err';
+    } finally {
+      btn.disabled = false;
+    }
+  });
+}
