@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muhammad Mohsin Nehan — Frontend AI Engineer</title>
+<link rel="icon" type="image/png" href="./images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="logo">Mohsin Nehan</div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" title="Toggle light/dark mode">🌙</button>
+      <a class="nav-cv" href="./Mohsin_Nehan_Resume.pdf" target="_blank" rel="noopener">Download CV</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div>
+      <div class="eyebrow">Frontend AI Engineer</div>
+      <h1>I fix what AI-generated<br>code gets <span class="grad">wrong, then ship it.</span></h1>
+      <p class="lead">Hi, I'm Mohsin — a frontend developer building AI-integrated, responsive web applications, currently interning as a Front-End AI Engineer at FlyRank AI.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#projects">View My Work →</a>
+        <a class="btn btn-secondary" href="#contact">Get In Touch</a>
+      </div>
+      <div class="stats">
+        <div><div class="stat-num">2+</div><div class="stat-label">Years Experience</div></div>
+        <div><div class="stat-num">7</div><div class="stat-label">Projects Shipped</div></div>
+        <div><div class="stat-num">1</div><div class="stat-label">Live Client Project</div></div>
+      </div>
+      <div class="tech-row">
+        <span class="tech-chip">React.js</span>
+        <span class="tech-chip">JavaScript</span>
+        <span class="tech-chip">HTML5 / CSS3</span>
+        <span class="tech-chip">Tailwind CSS</span>
+        <span class="tech-chip">Python</span>
+        <span class="tech-chip">Git / GitHub</span>
+      </div>
+    </div>
+    <div class="hero-photo-wrap">
+      <div class="hero-photo-glow"></div>
+      <img src="./images/profile.png" alt="Muhammad Mohsin Nehan">
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-label">About Me</div>
+    <div class="about-grid">
+      <div>
+        <h3>Building products with <span class="grad">clean code and real impact.</span></h3>
+        <p>I'm a Software Engineering student (BSSE, expected 2027) and frontend developer with 2+ years building responsive web applications in React.js, JavaScript, and Tailwind CSS. Currently a Front-End AI Engineer intern at FlyRank AI, building AI-integrated frontend interfaces. I've shipped live client and personal projects — including a multi-page e-commerce platform (Techova) and a production tailoring-brand website (ZEBAYSH) — and I don't just ship code, I document the decisions behind it.</p>
+      </div>
+      <div class="info-card">
+        <div class="info-row"><span class="k">Name</span><span class="v">Muhammad Mohsin Nehan</span></div>
+        <div class="info-row"><span class="k">Email</span><span class="v">nehanmohsin890@gmail.com</span></div>
+        <div class="info-row"><span class="k">Location</span><span class="v">Bahawalpur, Punjab, Pakistan</span></div>
+        <div class="info-row"><span class="k">Availability</span><span class="v">Interning at FlyRank AI — open to future opportunities</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES (formerly skills grid) -->
+  <section id="services">
+    <div class="section-label">What I Do</div>
+    <div class="section-title">Skills &amp; Services</div>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h4>Frontend Development</h4>
+        <p>Building responsive, accessible interfaces with modern frameworks.</p>
+        <div class="skill-tags"><span>React.js</span><span>·</span><span>JavaScript</span><span>·</span><span>Tailwind CSS</span></div>
+      </div>
+      <div class="skill-card">
+        <h4>AI-Integrated Development</h4>
+        <p>Wiring AI SDKs and streaming responses into real frontend workflows.</p>
+        <div class="skill-tags"><span>Vercel AI SDK</span><span>·</span><span>Prompt Engineering</span></div>
+      </div>
+      <div class="skill-card">
+        <h4>Backend &amp; Scripting</h4>
+        <p>Python for data handling, automation, and small backend tasks.</p>
+        <div class="skill-tags"><span>Python</span><span>·</span><span>Node (serverless)</span></div>
+      </div>
+      <div class="skill-card">
+        <h4>Testing &amp; Tooling</h4>
+        <p>Form validation and automated testing as part of the build, not an afterthought.</p>
+        <div class="skill-tags"><span>react-hook-form</span><span>·</span><span>Zod</span><span>·</span><span>Vitest</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS - sliding tech marquee -->
+  <section id="skills">
+    <div class="section-label">Tech I Work With</div>
+    <div class="section-title">Skills</div>
+    <div class="marquee-wrap">
+      <div class="marquee-track" id="marqueeTrack"></div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-label">Selected Work</div>
+    <div class="section-title">Featured Projects</div>
+
+    <div class="project-card">
+      <img src="./images/laptop-resume-tailor.png" alt="Resume Tailor project screenshot">
+      <div class="project-body">
+        <h4>Resume Tailor — FlyRank AI Capstone</h4>
+        <p>An AI tool that turns a job description and a candidate's background into a tailored cover letter and live skill-match analysis, streamed in real time. Diagnosed and fixed two real production bugs caused by AI-generated code trusting an outdated SDK API.</p>
+        <div class="project-tags"><span>Next.js</span><span>Vercel AI SDK</span><span>Gemini</span><span>Tailwind</span></div>
+        <div class="project-links">
+          <a class="primary" href="https://resume-tailor-official.vercel.app/" target="_blank" rel="noopener">Live Demo</a>
+          <a href="https://github.com/mohsin03nehan/flyrank_capstone/tree/main/resume-tailor" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="./images/laptop-techova.png" alt="Techova project screenshot">
+      <div class="project-body">
+        <h4>Techova — E-Commerce Platform</h4>
+        <p>A multi-page e-commerce platform for tech accessories, built from an SRS through to deployment — users, products, orders, and an admin panel across 14–15 real products.</p>
+        <div class="project-tags"><span>React.js</span><span>Tailwind CSS</span></div>
+        <div class="project-links">
+          <a class="primary" href="https://techova-mobile-accessories-store-sh.vercel.app/" target="_blank" rel="noopener">Live Demo</a>
+          <a href="https://github.com/mohsin03nehan/Techova-Mobile-Accessories-Store" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="./images/laptop-zebaysh.png" alt="ZEBAYSH project screenshot">
+      <div class="project-body">
+        <h4>ZEBAYSH — Tailoring Brand Website</h4>
+        <p>A responsive one-page website for a made-to-order tailoring business — custom image slider, Instagram-linked gallery, and multi-channel contact. Live client project; orders have increased since launch.</p>
+        <div class="project-tags"><span>HTML5</span><span>CSS</span><span>JavaScript</span></div>
+        <div class="project-links">
+          <a class="primary" href="https://zebayshofficial.vercel.app/" target="_blank" rel="noopener">Live Demo</a>
+          <a href="https://github.com/mohsin03nehan/ZEBAYSH-Tailoring-Website" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-title" style="margin-top:50px;">More Projects</div>
+    <div class="more-projects">
+      <div class="mini-card">
+        <h5>Student Performance Prediction System</h5>
+        <p>A data-driven prediction project. See the repo for details.</p>
+        <a href="https://github.com/mohsin03nehan/Student-Performance-Predictions" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+      <div class="mini-card">
+        <h5>Hangman Game</h5>
+        <p>A classic word-guessing game build. See the repo for details.</p>
+        <a href="https://github.com/mohsin03nehan/Hangman-Game" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+      <div class="mini-card">
+        <h5>Stock Portfolio Tracker</h5>
+        <p>A tool for tracking a stock portfolio. See the repo for details.</p>
+        <a href="https://github.com/mohsin03nehan/Stock-Portfolio-Tracker" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+      <div class="mini-card">
+        <h5>Basic Chatbot</h5>
+        <p>An early chatbot build. See the repo for details.</p>
+        <a href="https://github.com/mohsin03nehan/Basic-Chatbot" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="section-label">Career So Far</div>
+    <div class="section-title">Experience</div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="when">Jul 2026 — Present</div>
+        <h5>Front-End AI Engineer (Intern) — FlyRank AI</h5>
+        <div class="org">Remote</div>
+        <p>Building responsive frontend interfaces for AI-powered web applications; diagnosing real AI-SDK integration bugs; maintaining Git/GitHub workflow across all deliverables.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="when">May 2026 — Jun 2026</div>
+        <h5>Python Developer (Intern) — CodeAlpha</h5>
+        <div class="org">Remote</div>
+        <p>Task-based Python development internship — programming, data handling, and debugging on real-world exercises.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="when">Jul 2026 — Present</div>
+        <h5>Aspire Leaders Program — Cohort 3</h5>
+        <div class="org">Aspire Institute, Oxford, UK (Remote)</div>
+        <p>Global leadership development program — communication, leadership, and problem-solving alongside an international cohort.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="section-label">Academic Background</div>
+    <div class="section-title">Education</div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="when">Oct 2023 — Jul 2027 (Expected)</div>
+        <h5>BSSE — Software Engineering</h5>
+        <div class="org">The Islamia University of Bahawalpur · Merit-Based Scholarship Awardee · Grade: A</div>
+      </div>
+      <div class="timeline-item">
+        <div class="when">Sep 2020 — May 2022</div>
+        <h5>Intermediate — Pre-Engineering</h5>
+        <div class="org">Moon Boys College, Bahawalpur · Grade: A</div>
+      </div>
+      <div class="timeline-item">
+        <div class="when">2018 — 2020</div>
+        <h5>Matriculation</h5>
+        <div class="org">Govt. Sadiq Dane Model High School, Bahawalpur · Grade: A+</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-label">Get In Touch</div>
+    <div class="section-title">Let's Work Together</div>
+    <div class="contact-wrap">
+      <div class="contact-info">
+        <p>Have a project in mind, or want to talk about a role? I reply to every message myself.</p>
+        <div class="contact-links">
+          <a href="https://www.linkedin.com/in/mohsin-nehan/" target="_blank" rel="noopener">→ LinkedIn</a>
+          <a href="https://github.com/mohsin03nehan" target="_blank" rel="noopener">→ GitHub</a>
+          <a href="./Mohsin_Nehan_Resume.pdf" target="_blank" rel="noopener">→ Resume (PDF)</a>
+          <a href="mailto:nehanmohsin890@gmail.com">→ nehanmohsin890@gmail.com</a>
+        </div>
+      </div>
+      <form class="contact-form" id="contactForm">
+        <input type="text" id="name" placeholder="Your name" required>
+        <input type="email" id="email" placeholder="Your email" required>
+        <textarea id="message" placeholder="Your message" required></textarea>
+        <button type="submit" id="submitBtn">Send Message</button>
+        <div id="formStatus"></div>
+      </form>
+    </div>
+  </section>
+
+</div>
+
+<a href="#top" class="back-to-top" title="Back to top">↑</a>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-socials">
+      <a href="https://www.linkedin.com/in/mohsin-nehan/" target="_blank" rel="noopener" title="LinkedIn">
+        <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+      </a>
+      <a href="https://github.com/mohsin03nehan" target="_blank" rel="noopener" title="GitHub">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.89-2.78.62-3.37-1.21-3.37-1.21-.46-1.2-1.11-1.52-1.11-1.52-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.32.1-2.75 0 0 .84-.28 2.75 1.05a9.28 9.28 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.43.2 2.49.1 2.75.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/mohsin03nehan/" target="_blank" rel="noopener" title="Instagram">
+        <svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07zM12 0C8.74 0 8.33.01 7.05.07 5.78.12 4.9.33 4.14.63c-.79.31-1.46.72-2.13 1.38C1.35 2.68.94 3.35.63 4.14.33 4.9.12 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.05 1.27.26 2.15.56 2.91.31.79.72 1.46 1.38 2.13.66.66 1.34 1.07 2.13 1.38.76.3 1.64.51 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.05 2.15-.26 2.91-.56.79-.31 1.46-.72 2.13-1.38.66-.66 1.07-1.34 1.38-2.13.3-.76.51-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.05-1.27-.26-2.15-.56-2.91a5.85 5.85 0 0 0-1.38-2.13A5.85 5.85 0 0 0 19.86.63c-.76-.3-1.64-.51-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 12 18.16 6.16 6.16 0 0 0 12 5.84zm0 10.16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.41-10.4a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"/></svg>
+      </a>
+      <a href="https://wa.me/923156034636" target="_blank" rel="noopener" title="WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.6-.8-1.9-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.5.1-1.5-.7-2.5-1.3-3.4-2.9-.3-.4.3-.4.7-1.3.1-.2 0-.4 0-.5-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2.1 3.2 5 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.6-.7 1.9-1.3.2-.6.2-1.1.2-1.3-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.2-.4-4.5-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+      </a>
+    </div>
+    <div>© 2026 Muhammad Mohsin Nehan. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="./script.js"></script>
+</body>
+</html>
