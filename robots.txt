@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mohsinnehan.vercel.app/sitemap.xml
