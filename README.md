@@ -1,7 +1,6 @@
 # Muhammad Mohsin Nehan — Portfolio
 
 **Live site:** https://mohsinnehan.vercel.app
-**Repo:** https://github.com/mohsin03nehan/portfolio
 
 A personal portfolio website for Muhammad Mohsin Nehan, a Frontend Developer currently interning as a Front-End AI Engineer at FlyRank AI. The site presents his profile, skills, projects, experience, and education, and gives visitors (recruiters, clients, or collaborators) a fast way to see his work and get in touch.
 
