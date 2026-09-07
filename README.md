@@ -114,4 +114,3 @@ Tested with Google PageSpeed Insights on the live production URL (`https://mohsi
 ## Author
 
 **Muhammad Mohsin Nehan** 
-Portfolio: https://mohsinnehan.vercel.app
